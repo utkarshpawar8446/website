@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outdoor Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f0f0;
+    }
+
+   
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: transparent;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
+      color: white;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav-menu li a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+
+    .cta-button {
+      background-color: #ff0055;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      background-image: url('your-mountain-image.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-size: 80px;
+      font-weight: bold;
+    }
+
+    .customize-button {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .customize-button button {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .tagline-section {
+      text-align: center;
+      padding: 50px;
+      background-color: white;
+      color: black;
+    }
+
+    .tagline-section h2 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+   
+    .image-gallery {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .image-gallery .header p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: #555;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      width: 100%;
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card h3 {
+      margin: 15px;
+      font-size: 1.2em;
+    }
+
+    .card p {
+      margin: 0 15px 15px;
+      color: #555;
+      font-size: 0.9em;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container .card {
+      width: 350px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .card-content p {
+      margin: 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .content-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #cb4d4d;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #cb4d4d;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    ul li::before {
+      content: '-';
+      color: #cb4d4d;
+      position: absolute;
+      left: 0;
+    }
+
+    .column .customize-button {
+      background-color: #cb4d4d;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 20px;
+      float: right;
+    }
+
+   
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    .footer-content p {
+      margin: 5px 0;
+    }
+
+    
+    @media (max-width: 768px) {
+      .content-section {
+        flex-direction: column;
+      }
+
+      .column .customize-button {
+        float: none;
+        display: block;
+        margin: 20px auto 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">OUTDOOR ADVENTURE</div>
+    <nav class="nav-menu">
+    <nav>
+    <a href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/about.html">About</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/services.html">Services</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/projects.html">projects</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/contect.html">Contact</a>
+    
+    
+    </nav>
+    </nav>
+    <button class="cta-button">TAKE ACTION</button>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-content">
+      <h1>Services</h1>
+    </div>
+    <div class="customize-button">
+      <button>Customize</button>
+    </div>
+  </main>
+
+  <section class="tagline-section">
+    <h2>It's Time to Start Your Adventures</h2>
+  </section>
+
+  <section class="image-gallery">
+    <div class="header">
+      <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus ullamcorper pulvinar.</p>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2021/02/outdoor-image-03.jpg" alt="Backpacking Trip">
+        <h3>Backpacking Trips</h3>
+        <p>Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
+      </div>
+      <div class="card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/services-2.jpg" alt="Family Hiking Trip">
+        <h3>Family Hiking Trips</h3>
+        <p>Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/services-3.jpg" alt="Water sports" />
+      <div class="card-content">
+        <h3>Water Sports</h3>
+        <p>Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2021/02/outdoor-image-01.jpg" alt="Winter sports" />
+      <div class="card-content">
+        <h3>Winter Sports</h3>
+        <p>Fuerat aestu carentem habentia spectent tonitrua mutastis locavit liberioris inistra possedit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="column">
+      <h2>Why Outdoor Adventure</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      <ul>
+        <li>Experience: Locavit liberioris possedit</li>
+        <li>Reputation: Diremit mundi mare undae</li>
+        <li>Guide Experience: Spectent tonitrua mutastis</li>
+      </ul>
+    </div>
+    <div class="column">
+      <h2>What You Get</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+      <ul>
+        <li>Private Hike: Locavit liberioris possedit</li>
+        <li>Transportation: Diremit mundi mare undae</li>
+        <li>Great Facilities: Spectent tonitrua mutastis</li>
+      </ul>
+      <button class="customize-button">Customize</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com</p>
+      <p>Copyright &copy; 2025 Outdoor Adventure</p>
+    </div>
+  </footer>
+
+</body>
+</html>

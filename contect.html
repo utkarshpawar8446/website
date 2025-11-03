@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Outdoor Adventure</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+ 
+        .main-header {
+            background-color: #fff;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav ul li {
+            margin-left: 20px;
+        }
+
+        .main-nav ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: #e44d26;
+        }
+
+        .action-button {
+            background-color: #e44d26;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+        .hero-section {
+            background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fveganlifeandliving.com%2Fcontact%2F&psig=AOvVaw213cZT25JDluDHVFVKv6Su&ust=1762186993006000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjeroDw05ADFQAAAAAdAAAAABAE'); 
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            margin-top: 70px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .customize-button {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    
+        .contact-info-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-info-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-info-section h3 {
+            font-size: 1.8em;
+            color: #666;
+        }
+
+    
+        .contact-form-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+            flex-wrap: wrap;
+        }
+
+        .form-container {
+            flex: 1;
+            margin-right: 50px;
+            min-width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .send-button {
+            background-color: #e91e63;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            flex: 1;
+            padding-left: 50px;
+            border-left: 1px solid #eee;
+            min-width: 300px;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: #e91e63;
+            font-size: 24px;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .contact-form-section {
+                flex-direction: column;
+            }
+
+            .form-container {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .contact-info {
+                padding-left: 0;
+                border-left: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">OUTDOOR ADVENTURE</div>
+            <nav class="main-nav">
+            <nav>
+    <a href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/about.html">About</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/services.html">Services</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/projects.html">projects</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/contect.html">Contact</a>
+    
+            </nav>
+      
+            </nav>
+            <button class="action-button">TAKE ACTION</button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <button class="customize-button">Customize</button>
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="container">
+            <h2>We're Ready, Let's Talk.</h2>
+            <h3>Contact Info</h3>
+        </div>
+    </section>
+
+
+    <main class="container">
+        <div class="contact-form-section">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="send-button">SEND MESSAGE</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Address</h3>
+                <p>123 Fifth Avenue, NY 10160, New York, USA</p>
+                <h3>Email Us</h3>
+                <p>contact@example.com</p>
+                <h3>Call Us</h3>
+                <p>800-123-456</p>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com</p>
+            <p>Copyright © 2025 Outdoor Adventure</p>
+        </div>
+    </footer>
+
+</body>
+</html>

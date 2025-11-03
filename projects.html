@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outdoor Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstocksnap.io%2Fphoto%2Fwidescreeen-beautiful-KDDWW6SNFE&psig=AOvVaw1pkCMf6YUKSGrsiUCil5vw&ust=1762187142162000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCbhsjw05ADFQAAAAAdAAAAABAE');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .cta-button {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero-content {
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content h1 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .customize-button {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+    }
+
+    .customize-button button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+ 
+    .section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: #666;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .image-card img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .dots-container, .pagination, .slider-dots {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #ff4081;
+    }
+
+    
+    .site-footer {
+      background-color: #2c2c2c;
+      color: #cccccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
+    .site-footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero-section">
+    <nav class="navbar">
+      <div class="logo">OUTDOOR ADVENTURE</div>
+      <ul class="nav-links">
+        <nav>
+    <a href="http://127.0.0.1:5500/HTML/index.html">Home</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/about.html">About</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/services.html">Services</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/projects.html">projects</a>
+    <a href="http://127.0.0.1:5500/HTML/New%20Website/contect.html">Contact</a>
+    
+        </nav>
+      </ul>
+      <button class="cta-button">TAKE ACTION</button>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Our Projects</h1>
+    </div>
+
+    <div class="customize-button">
+      <button>Customize</button>
+    </div>
+  </header>
+
+
+  <section class="section">
+    <h2>Water Sports</h2>
+    <p>Interdum exercitation penatibus, praesentium facilisi accusamus fermentum, sagittis.</p>
+    <div class="image-gallery">
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/water-sports-03.jpg" alt="Water sport 1" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/water-sports-04.jpg" alt="Water sport 2" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/2018/11/water-sports-01.jpg" alt="Water sport 3" />
+      </div>
+    </div>
+    <div class="dots-container">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>Winter Sports</h2>
+    <p>Interdum exercitation penatibus, praesentium facilisi accusamus fermentum, sagittis.</p>
+    <div class="image-gallery">
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/winter-sports-01-nzqdakvd9y6ql3cjzkfjdcrr6o5msw2mv8o8ug2dqw.jpg" alt="Skiing down slope" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/winter-sports-02-nzqdabgzdltvczq7igd9of558tfynx1bhy5e1ogbh4.jpg" alt="Chairlift view" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/winter-sports-03-nzqd8khsnpfnr49oq759jd19g02dc73axafuw51p20.jpg" alt="Snowboard trick" />
+      </div>
+    </div>
+    <div class="pagination">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Camping</h2>
+    <p>Interdum exercitation penatibus, praesentium facilisi accusamus fermentum, sagittis.</p>
+    <div class="image-gallery">
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/camp-1-nzqd81p0v0pxax0zrz0q5hs1kan1290o6pe5altkig.jpg" alt="Tent by lake" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/camp-2-nzqd7cbdqhr6lg1uw61ss66liw44af7x37s1c4v76g.jpg" alt="Tent at sunrise" />
+      </div>
+      <div class="image-card">
+        <img src="https://websitedemos.net/outdoor-adventure-02/wp-content/uploads/sites/351/elementor/thumbs/camp-3-nzqd6qp3daxl6ex9eepdotmzv12oddu3c8rvarr95k.jpg" alt="Tent on ridge" />
+      </div>
+    </div>
+    <div class="slider-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <p>123 Fifth Avenue, NY 10160, New York, USA | Phone: 800-123-456 | Email: contact@example.com</p>
+    <p>Copyright © 2025 Outdoor Adventure</p>
+  </footer>
+</body>
+</html>
